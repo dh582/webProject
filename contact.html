@@ -1,13 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-4.7.0" crossorigin="anonymous" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
-    <link rel="stylesheet" href="style.css"> <!-- You can link your own stylesheet here -->
+    <link rel="stylesheet" href="style.cs"> <!-- You can link your own stylesheet here -->
+     <style>
+        /* Additional CSS styles */
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', san-serif;
+            background-color: #001f3f;
+        }
+        .contact
+        {
+        position:relative;
+        min-height:100vh;
+        padding: 50px 100px;
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        flex-direction:column;
+        background-size:cover;
+        }
+        .contact .content
+        {
+            max-width: 800px;
+            text-align: center;
+        }
+        .contact .content
+        {
+            max-width:800px;
+            text-align: center;
+        }
+        .contact .content h2
+        {
+            font-size: 36px;
+            font-weight:500;
+            color:#fff;
+        }
+        .contact .content p
+        {
+            font-weight:300;
+            color:#fff;
+        }
+        .container
+        {
+            width: 100%;
+            display:flex;
+            justify-content:center;
+            margin-top: 30px;
+        }
+        .container .contactInfo
+        {
+            width:50%;
+            display:flex;
+            flex-direction:column;
+        }
+        .container .contactInfo .box
+        {
+            position:relative;
+            padding:20px 0;
+            display:flex;
+
+        }
+        .contact .contactInfo .box .text
+        {
+            display: flex;
+            margin-left:20px;
+            font-size:16px;
+            color: #fff;
+            flex-direction:column;
+            font-weight:300;
+
+        }
+        .container .contactInfo .box .icon{
+        
+            min-width: 50px;
+            height: 50px;
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            font-size: 22px;
+        }
+        .container .contactInfo .box .text{
+            display: flex;
+            margin-left: 20px;
+            font-size: 16px;
+            color: #fff;
+            flex-direction:column;
+            font-weight: 300;
+
+        }
+        .container .contactInfo.box .text h3{
+            font-weight: 80;
+            color: #fff;
+            
+        }
+        
+        .contactForm
+        {
+            width: 40%;
+            padding: 40px;
+            background: #fff;
+        }
+        .contactForm h2 
+        {
+            font-size: 30px;
+            color: #001f3f;
+            font-weight: 500;
+        }
+       
+ 
+
+
+
+        nav img {
+    width: 150px;
+    background: transparent;
+}
+.contactForm .inputBox
+        {
+            position: relative;
+            width: 100%;
+            margin-top: 10px;
+
+        }
+.contactForm .inputBox input,
+.contactForm .inputBox textarea
+{
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    resize: none;
+}
+
+.contactForm .inputBox span{
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+
+}
+.contactForm .inputBox input:focus ~ span,
+.contactForm .inputBox input:valid ~ span,
+.contactForm .inputBox textarea:focus ~ span,
+.contactForm .inputBox textarea:valid ~ span
+{
+    color: #e91e63;
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+.contactForm .inputBox input[type="submit"]
+{
+    width:100px;
+    background: #00bcd4;
+    color:#fff;
+    border: none;
+    cursor: pointer;
+    padding:10px;
+    font-size:18px;
+    
+}
+
+.nav-links ul li {
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+    
+}
+.nav-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+    transition: width 0.5s ease;
+}
+
+
+
+ </style>
 </head>
 <body>
-    <section class="header">
         <nav>
             <a href="index.html"><img src="images/logo.png"></a>
             <div class="nav-links" id="navLinks">
@@ -18,20 +205,63 @@
             </div>
             <i class="fas fa-bars" onclick="showMenu()"></i>
         </nav>
-        <h1>Contact Us</h1>
-        <p>Feel free to reach out to us with any queries or questions you may have!</p>
-        <form action="submit_query.php" method="POST"> <!-- Updated action attribute -->
-            <label for="name">Your Name:</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="email">Your Email:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="message">Your Message:</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
-
-            <input type="submit" value="Submit">
-        </form>
+        <section class="contact">
+             <div class="content">
+               <h2>Contact Us</h2>
+               <p>Feel free to contact us for any enquires</p>
+       </div>
+       <div class ="container">
+       <div class="contactInfo">
+       <div class="box">
+           <div class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+               <div class="text">
+               <h3>Address</h3>
+                   <p>North Holmes Road,<br>Canterbury, England,<br>CT1 1QU</p>
+           
+       </div>
+       </div>
+         <div class ="box">
+           <div class="icon"><i class="fa fa-phone" aria-hidden="true"></i></div>
+               <div class="text">
+                   <h3>Phone</h3>
+                   <p>020-750-20123</p>
+           
+       </div>
+       </div>
+         <div class ="box">
+           <div class="icon"><i class="fa fa-envelope" aria-hidden="true"></i></div>
+               <div class="text">
+                   <h3>Email</h3>
+                   <p>courses@canterbury.ac.uk</p>
+           
+       </div>
+       </div>
+       </div>
+       <div class="contactForm">
+           <form>
+               <h2>Send Message</h2>
+               <div class="inputBox">
+                   <input type="text" name="" required="required">
+                   <span>Full Name</span>
+               </div>
+                <div class="inputBox">
+                   <input type="text" name="" required="required">
+                   <span>Email Name</span>
+               </div>
+               <div class="inputBox">
+                   <textarea required="required"></textarea>
+                   <span>Type your message</span>
+               </div>
+               <div class="inputBox">
+                   <input type="submit" name="" value="Send">
+               </div>
+           </form>
+           
+           
+       </div>
+       
+       </div>
+      
     </section>
 </body>
 </html>
