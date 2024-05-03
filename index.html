@@ -9,6 +9,8 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-4.7.0" crossorigin="anonymous" />
 <script src="js.js" defer></script>
 
+
+
     </head>
     <body>
         <section class="header">
@@ -65,30 +67,31 @@
 
 
 <!-------Pictures--------->
-<section class="pictures">
-    <h1>Software Engineering behind the pictures</h1>
-    <p>Lorem ipsum dolor sit amet</p>
-    
-    <div class="row">
-        <div class="campus-col">
-            <img id="campusImage" src="images/Picture1.jpg" onclick="changeImage()">
-            <div id="description">
-                <p id="imageDescription">Description of Picture1</p>
-            </div>
+<div class="container">
+    <div class="image-container">
+        <img src="images/Picture1.jpg" alt="Image 1">
+        <div class="notes hidden" id="notesContainer1">
+            <p><strong>Answer:</p>
         </div>
     </div>
-</section>
+    <button id="toggleButton">Click on me</button>
+    <div class="image-container hidden" id="secondImageContainer">
+        <img src="images/Picture1.1.jpg" alt="Image 2">
+        <div class="notes hidden" id="notesContainer2">
+            <p><strong>Soccer design:</strong> Aerodynamics, Footwear Performance Test, Goal Line Technology & Net, Mechanical Engineering, Apparel Design, Materials Science, Kicking Ball, Biomechanics, Environmental sustainability, Field, Structural Engineering.</p>
+        </div>
+    </div>
+</div>
+
 <script>
-
-var navLinks = document.getElementById("navLinks");
-
-function showMenu(){
-    navLinks.style.right = "0";
-}
-function hideMenu(){
-    navLinks.style.right = "-200px";
-}
-
+document.getElementById("toggleButton").addEventListener("click", function() {
+    var secondImageContainer = document.getElementById("secondImageContainer");
+    var notesContainer2 = document.getElementById("notesContainer2");
+    var notesContainer1 = document.getElementById("notesContainer1");
+    secondImageContainer.classList.toggle("hidden");
+    notesContainer2.classList.toggle("hidden");
+    notesContainer1.classList.toggle("hidden");
+});
 </script>
 
     </body>

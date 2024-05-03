@@ -210,6 +210,7 @@ p{
     /* other styles */
 }
 
+
 /* Contact form styles */
 
 form {
@@ -347,4 +348,57 @@ input[type="submit"]:hover {
 }
 .post img:hover{
     transform:scale(1,1.1);
+}
+
+/* Puzzle images page Style */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #001f3f;
+    color: #fff;
+    padding: 20px;
+}
+
+.container {
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+#toggleButton {
+    color: #090000; /* White text color */
+    background-color: #fff; /* White background */
+    border: 1px solid #fff; /* White border */
+    padding: 15px 30px; /* Increased padding for larger button */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: color 0.3s, background-color 0.3s;
+    font-size: 16px; /* Increased font size for larger button */
+}
+
+#toggleButton:hover {
+    color: #001f3f; /* Dark blue text color on hover */
+    background-color: transparent; /* Transparent background on hover */
+}
+
+.image-container {
+    margin-bottom: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+.notes {
+    background-color: #fff; /* White background */
+    color: #001f3f; /* Dark blue text color */
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-top: 10px;
+    text-align: center;
 }
